@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Dris Home Page</title>
+        <meta name="description" content="Home Page for Dris" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        />
+        <link
+        rel="stylesheet"
+        href="css/style.css"
+        type="text/css"
+        />      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <a href="home.html" class="logo">Dris' Potatoes</a>
+            <nav class="navbar">
+              <a href="home.html">Home</a>
+              <a href="epic-seven.html">Epic Seven</a>
+              <a href="star-rail.html">Honkai: Star Rail</a>
+            </div>
+          </div>
+          <div id="left-side" class="side">
+            <h2 class="title">
+              Welcome to Dris' Gacha 
+              <span class="fancy">Overview</span>
+            </h2>
+          </div>
+          <div id="right-side" class="side">
+            <h2 class="title">
+              Welcome to Dris' Gacha 
+              <span class="fancy">Hell</span>
+            </h2>
+          </div>
+          <script>
+            const left = document.getElementById("left-side");
+            const handleOnMove = e => {
+              const p = e.clientX / window.innerWidth * 100;
+              left.style.width = `${p}%`;
+            }
+            document.onmousemove = e => handleOnMove(e);
+            document.ontouchmove = e => handleOnMove(e.touches[0]);
+          </script>          
+    </body>
+</html>
