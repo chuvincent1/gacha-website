@@ -99,11 +99,11 @@ body {
 }
 
 #left-side .fancy {
-  color: var(--yellow);
+  color: var(#85a192);
 }
 
 #left-side {
-  background-color: var(--purple);
+  background-color: var(#bdb0d0);
   z-index: 2;
 }
 
@@ -116,7 +116,7 @@ body {
 }
 
 #right-side {
-  background-color: var(--yellow);
+  background-color: var(#85a192);
 }
 
 .grid {
