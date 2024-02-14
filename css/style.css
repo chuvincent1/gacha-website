@@ -14,7 +14,8 @@ body {
   line-height: 1.25;
   background-size: cover;
   background-position: center;
-  background-color: black;
+  font-family: 'Roboto Mono', monospace;
+  background: #212121;
 }
 
 /* Header css stylesheet */
@@ -119,7 +120,26 @@ body {
   background-color: #FF7F50;
 }
 
+.scrambleContainer {
+  height: 50vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.scrambleText {
+  font-weight: 100;
+  font-size: 28px;
+  color: #FAFAFA;
+}
+
+.dud {
+  color: #FF7F50;
+}
+
 .grid {
+  padding-top: 10vh;
   width: 100%;
   max-width: 75rem;
   margin-left: auto;
@@ -186,6 +206,7 @@ body {
   -webkit-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
 }
+
 .tile-link:hover .tile-img1 {
   box-shadow: 5px 5px rgba(244, 170, 200, 0.4),
     10px 10px rgba(244, 170, 200, 0.3), 15px 15px rgba(244, 170, 200, 0.2),
