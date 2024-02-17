@@ -82,14 +82,11 @@
 
         const phrases = [
             'To those whom it may concern,',
-            'sooner or later',
-            'you will understand',
-            'just as I did',
+            'one day you will understand',
+            'just as I once did',
             'that there is a difference',
-            'between knowing',
-            'and walking',
-            "the gacha hell path",
-            "Good luck..."
+            'between "knowing" the gacha hell path',
+            'and walking it'
         ]
 
         const el = document.querySelector('.scrambleText')
@@ -97,7 +94,7 @@
         let counter = 0
         const next = () => {
             fx.setText(phrases[counter]).then(() => {
-                setTimeout(next, 1500)
+                setTimeout(next, 1800)
             })
             counter = (counter + 1) % phrases.length
         }
