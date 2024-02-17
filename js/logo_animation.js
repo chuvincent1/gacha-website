@@ -1,5 +1,4 @@
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-console.log(document.querySelector("#logo").innerText);
 document.querySelector("#logo").onmouseover = event => {
     let iterations = 0;
     const interval = setInterval(() => {
