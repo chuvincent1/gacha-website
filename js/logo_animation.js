@@ -14,6 +14,6 @@ document.querySelector("#logo").onmouseover = event => {
         if (iterations >= event.target.dataset.value.length) {
             clearInterval(interval);
         }
-        iterations += 1/2;
+        iterations += 1/3;
     }, 30);
 }
