@@ -138,6 +138,15 @@ body {
   color: #FF7F50;
 }
 
+/*star rail*/
+#image-track > .image {
+  width: 40vmin;
+  height: 56vmin;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* epic seven image grid */
 .grid {
   padding-top: 10vh;
   width: 100%;
