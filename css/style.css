@@ -185,6 +185,72 @@ body.hsr {
   cursor: pointer;
 }
 
+/*credits*/
+.credits {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+
+.credits-content {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.center h1 {
+  color: #fff;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.box {
+  padding: 16px;
+  background: gray;
+  border-radius: 15px;
+  transition: all 0.38s ease;
+}
+
+.box h3 {
+  font-size: 23px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.box h5 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #b7b4bb;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.box img {
+  max-height: 100px;
+  max-width: 100px;
+}
+
+a:link, a:visited {
+  background-color: transparent;
+  color: white;
+  text-align: center;
+}
+
+a.credits:hover, a:active {
+  background-color: transparent;
+}
+
 /* epic seven image grid */
 .grid {
   padding-top: 10vh;

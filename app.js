@@ -28,12 +28,13 @@ let close = document.querySelector("span");
 images.forEach((img, index) => {
   img.addEventListener("click", () => {
     openImage(img.src);
-    console.log(img.srcset);
   });
 });
 
 //Closes popup if click or hit escape key
-close.addEventListener("click", () => (popup.style.display = "none"));
+if (close != null) {
+  close.addEventListener("click", () => (popup.style.display = "none"));
+}
 document.onkeydown = function (e) {
   if (e.key == "Escape") {
     popup.style.display = "none";
