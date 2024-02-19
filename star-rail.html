@@ -49,33 +49,33 @@
         srcset="https://imgur.com/b2L73F3.png" alt="Seele" />
     </div>
     <script>
-    const track = document.getElementById("image-track");
-    window.onmousedown = e => {
-      track.dataset.mouseDownAt = e.clientX;
-    }
-    window.onmousemove = e => {
-      if (track.dataset.mouseDownAt === "0") {
-        return;
+      const track = document.getElementById("image-track");
+      window.onmousedown = e => {
+        track.dataset.mouseDownAt = e.clientX;
       }
-      const mouseChange = parseFloat(track.dataset.mouseDownAt) - e.clientX,
-            maxChange = window.innerWidth /2;
-      const percent = (mouseChange / maxChange) * -100,
-            nextPercent = ~~Math.min(Math.max((parseFloat(track.dataset.prevPercent ) + percent), -100), 0);
-      track.dataset.percent = nextPercent;
-      track.animate({
-        transform: `translate(${nextPercent}%, -50%)`
-      }, {duration: 1200, fill: "forwards"});
-      for (const image of track.getElementsByClassName("image")) {
-        image.animate({
-        objectPosition: `${100 + nextPercent}% center`
+      window.onmousemove = e => {
+        if (track.dataset.mouseDownAt === "0") {
+          return;
+        }
+        const mouseChange = parseFloat(track.dataset.mouseDownAt) - e.clientX,
+              maxChange = window.innerWidth / 2;
+        const percent = (mouseChange / maxChange) * -100,
+              nextPercent = ~~Math.min(Math.max((parseFloat(track.dataset.prevPercent ) + percent), -100), 0);
+        track.dataset.percent = nextPercent;
+        track.animate({
+          transform: `translate(${nextPercent}%, -50%)`
         }, {duration: 1200, fill: "forwards"});
+        for (const image of track.getElementsByClassName("image")) {
+          image.animate({
+          objectPosition: `${100 + nextPercent}% center`
+          }, {duration: 1200, fill: "forwards"});
+        }
       }
-    }
-    window.onmouseup = () => {
-      track.dataset.mouseDownAt = "0";
-      track.dataset.prevPercent = track.dataset.percent;
-    }
-  </script>
+      window.onmouseup = () => {
+        track.dataset.mouseDownAt = "0";
+        track.dataset.prevPercent = track.dataset.percent;
+      }
+    </script>
     <script src="app.js"></script>
   </body>
 </html>
